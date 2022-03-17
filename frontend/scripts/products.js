@@ -1,7 +1,7 @@
 //Get the products from the database
 
-let itemContainer = document.querySelector(".inventory");
-let featuredContainer = document.querySelector(".featured");
+let itemContainer = document.querySelector(".inventory__container");
+let featuredContainer = document.querySelector(".featured__container");
 
 //pull data from database
 async function fetchProducts() {
@@ -35,12 +35,11 @@ async function fetchFeatured() {
 
     for (i = 0; i < data.length; i++) {
         featuredContainer.innerHTML += `
-        <div class="featured__container">
-        <div class="featured__card item1">
-            <a href="./products/product.html">
-            <h3 class="related__card--subhead">${data[i].prodname}</h3>
-            <img src="${data[i].img}"></a>
-            </a>
+        <div class="featured__card">
+                <h3 class="featured__card--subhead">${data[i].prodname}</h3>
+                <div class="featured__card--cardimg">
+                    <a href="./detail.html"><img src="${data[i].img}" alt="component image"></a>
+                </div>
         </div>`;
     }
     return data;
