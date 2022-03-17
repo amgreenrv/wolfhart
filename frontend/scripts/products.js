@@ -5,7 +5,7 @@ let featuredContainer = document.querySelector(".featured");
 
 //pull data from database
 async function fetchProducts() {
-    console.log("function was hit");
+    console.log("fetchProducts was hit");
     const response = await fetch(`http://localhost:8080/products`);
     const data = await response.json();
     console.log(data);
@@ -27,17 +27,17 @@ async function fetchProducts() {
 }
 
 async function fetchFeatured() {
-    
+    console.log("fetchFeatured was hit");
     const response = await fetch(`http://localhost:8080/`);
     const data = await response.json();
 
     for (i = 0; i < data.length; i++) {
-        featuredContainer.innerHTML += `
+        featuredContainer.innerHTML += `<h1>THIS IS STILL FEATURED</h1>
         <div class="related__card">
-        <a href="./products.html">
-        <h3 class="related__card--subhead">${data[i].prodname}</h3>
-        <img src="${data[i].img}></a>
-    </div>`;
+            <a href="./products.html">
+            <h3 class="related__card--subhead">${data[i].prodname}</h3>
+            <img src="${data[i].img}"></a>
+        </div>`;
     }
     return data;
 }
