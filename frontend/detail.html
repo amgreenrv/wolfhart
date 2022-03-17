@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>wolfhart hardware | featured</title>
+<meta name="description" content="wolfhart pc hardware individual products page">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="./css/styles.css">
+<link rel="stylesheet" type="text/css" href="./css/prod.css">
+<link rel="stylesheet" type="text/css" href="./css/grid.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,400;0,700;0,900;1,100&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/8a2df74aaa.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!--Nav Section-->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="./index.html" id="navbar__logo"><img src="./img/logo.png" width="10%">Wolfhart Hardware</a>
+                <button class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="./index.html" class="navbar__links">Home</a></li>
+                <li class="navbar__item">
+                    <a href="./products.html" class="navbar__links">Products</a></li>
+                <li class="navbar__item">
+                    <a href="./contact.html" class="navbar__links">Contact</a></li>
+                <li class="navbar__btn">
+                    <a href="./search.html" class="button"><i class="fas fa-search"></i>Search</a></li>
+            </ul>
+            </div>
+        </nav>
+<!--End Nav Section-->
+
+
+<!--Featured Product-->
+
+    <div class="featured__product__container">
+
+        <div class="featured__product--preview">
+            <img src="./img/product/case-h510SE.png" id="imagebox" alt="placeholder">
+        </div>
+
+        <div class="featured__product--items">
+
+            <img src="./img/product/case-h510SE.png" alt="system main" onclick="clickMe(this)">
+            <img src="./img/product/h510/h510-front-filters.png" alt="front filters" onclick="clickMe(this)">
+            <img src="./img/product/h510/h510-system-open.png" alt="system open" onclick="clickMe(this)">
+            <img src="./img/product/h510/h510-system-top.png" alt="system top" onclick="clickMe(this)">
+
+        </div>
+
+
+        <div class="featured__product--content">
+            <h2>H510 Valhalla</h2>
+                <h3>Limited Edition Compact Mid-Tower</h3>
+                    <p class="featured__product--content--price">$249</p>
+
+                    <p class="featured__product--content--quantity">
+                        <button type="button">
+                            <i class="fa fa-shopping-cart"></i>Add to cart
+                        </button>
+                    Quantity: <input type="text" value="1">
+                    </p>
+                    <p class="featured__product--content--desc">This H510 is fit for a Viking down to the last detail. 
+                    The motherboard tray appears in Valhalla thematic colors. The limited edition puck has been crafted 
+                    in the design of Eivor's crested shield, with a removable arrow.</p>
+
+                    <ul class="featured__product--info">
+                        <li>Iconic cable management bar and uninterrupted tempered-glass side panel</li>
+                        <li>USB 3.1 Gen2-compatible USB-C connector on the front panel</li>
+                        <li>Cable routing kit with pre-installed channels and straps</li>
+                        <li>Two Aer F120mm fans and removable filter on PSU intake</li>
+                        <li>Removable bracket designed for radiators up to 280mm</li>
+                        <li>Nvidia GeForce RTX 30 Series Case Compatibility Guide</li>
+                        <li>Case version fans and specs vary from retail version</li>
+                    </ul>
+        </div>
+    </div>
+
+<!--End Featured Product-->
+
+
+<!--Related Products Section-->
+<h2 id="feat">Related Products</h2>
+<div class="related__products--banner">
+    <div class="featured"></div>
+</div>
+
+<!--End of Related Products Section-->
+
+
+
+<!--Footer Section-->
+
+<footer>
+        <h2>Find Us on Social Media</h2>
+        <div class="footer__link">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook fa-3x"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram fa-3x"></i></a>
+            <a href="https://www.twitter.com"><i class="fab fa-twitter fa-3x"></i></a>
+        </div>
+        <p>&copy; Wolfhart Hardware | Seattle, WA</p>
+
+</footer>
+
+<script src="./scripts/app.js"></script>
+<script src="./scripts/products.js"></script>
+<script src="./scripts/featured.js"></script>
+</body>
+</html>

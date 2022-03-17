@@ -1,0 +1,40 @@
+.search__container--bar {
+    width: 100%;
+    text-align: center;
+}
+
+.search__container--bar input[type=text], select, textarea {
+    padding: .5% 10%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.search__container--button {
+    padding: 1%;
+    background-color: #217065;
+    color: #fff;
+}
+
+.search__container--button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.search__container h2{
+    text-align: center;
+    font-size: 3rem;
+    color: #fff; 
+    -webkit-text-stroke: 1px #000;
+    padding-top: 20px;
+}
+
+.search__container--term{
+    font-size: 1.2em;
+}
+
+.main__content--featured {
+    text-align: center;
+}
+

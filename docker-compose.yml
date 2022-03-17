@@ -1,0 +1,48 @@
+version: '3'
+services:
+
+  database:
+    image: mysql
+    build:
+      context: ./database
+    ports:
+      - "3300:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${PASSWORD}
+      MYSQL_DATABASE: ${DATABASE}
+    container_name: database
+    networks:
+      - backend
+
+  app:
+    container_name: golang
+    build:
+      context: ./app
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
+    networks:
+      - frontend
+      - backend
+    depends_on:
+      - database
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    ports:
+      - "3000:80"
+    networks:
+      - backend
+    depends_on:
+      - database
+      - app
+
+networks:
+  backend:
+  frontend:

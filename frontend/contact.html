@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>wolfhart hardware | contact</title>
+<meta name="description" content="wolfhart pc hardware contact page">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="./css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,400;0,700;0,900;1,100&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/8a2df74aaa.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!--Nav Section-->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="./index.html" id="navbar__logo"><img src="./img/logo.png" width="10%">Wolfhart Hardware</a>
+                <button class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="./index.html" class="navbar__links">Home</a></li>
+                <li class="navbar__item">
+                    <a href="./products.html" class="navbar__links">Products</a></li>
+                <li class="navbar__item">
+                    <a href="#" class="navbar__links">Contact</a></li>
+                <li class="navbar__btn">
+                    <a href="./search.html" class="button"><i class="fas fa-search"></i>Search</a></li>
+            </ul>
+            </div>
+        </nav>
+
+<!--End of Nav Section-->
+
+<!--Contact Form Section-->
+
+
+
+        <div class="contact__container">
+            <form id="form" action="/action_page.php" method="get">
+
+                    <label for="name">Username</label>
+                    <input type="text" id="username" name="name" placeholder="Enter your name (required)">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter a valid email (required)">
+
+                    <label for="phone">Phone Number: ###-###-####</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter a valid phone number" pattern="^[1-9]\d{2}-\d{3}-\d{4}">
+
+                    <fieldset>
+                    <legend>What is your preferred contact method?</legend>
+                      <input type="radio" id="radEmail" name="contact_method" value="Email">
+                      <label for="email">Email</label>
+                      <input type="radio" id="radPhone" name="contact_method" value="Phone">
+                      <label for="phone">Phone</label>
+                      <input type="radio" id="radPigeon" name="contact_method" value="Homing Pigeon">
+                      <label for="pigeon">Homing Pigeon</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>How did you hear about us?</legend>
+                        <input type="checkbox" id="contact1" name="contact1" value="Social Media">
+                        <label for="contact1"> Social Media</label>
+                        <input type="checkbox" id="contact2" name="contact2" value="Friend or Family">
+                        <label for="contact2"> Advertisement</label>
+                        <input type="checkbox" id="contact3" name="contact3" value="Search Engine">
+                        <label for="contact3"> Search Engine</label>
+                    </fieldset>
+
+                    <textarea id="subject" name="subject" placeholder="Leave us a message.." style="height:200px"></textarea>
+
+                    <input type="submit" value="Submit">
+            </form>
+        </div>
+
+
+<!--End of Contact Form Section-->
+
+
+<!--Featured Products Section-->
+<h2 class="main__content--featured">Featured Products</h2>
+
+<div class="featured"></div>
+
+<!--End of Featured Products Section-->
+
+
+<!--Footer Section-->
+
+<footer>
+        <h2>Find Us on Social Media</h2>
+        <div class="footer__link">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook fa-3x"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram fa-3x"></i></a>
+            <a href="https://www.twitter.com"><i class="fab fa-twitter fa-3x"></i></a>
+        </div>
+        <p>&copy; Wolfhart Hardware | Seattle, WA</p>
+    </div>
+</footer>
+<!--End of Footer Section-->
+
+
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/products.js"></script>
+    <script src="./scripts/featured.js"></script>
+</body>
+</html>

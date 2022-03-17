@@ -1,0 +1,274 @@
+form span{
+    display:inline-block;
+    width: 100%;
+}
+
+.featured {
+    background-color: #282b29;
+}
+
+.featured p {
+    margin: 10% 0 15% 0;
+    font-size: 1.3em;
+}
+
+.featured__container {
+    background-color: #282b29;
+    margin: 5% 1% 0;
+    padding: 3% 3%;
+    display: grid;
+    grid-column-gap: 3%;
+    grid-row-gap: 3%;
+    grid-template-columns: 20% 40% 40%;
+}
+
+.featured__card--subhead {
+    font-size: 2em;
+    -webkit-text-stroke: 1px #000;
+    padding: 10px 10px;
+}
+
+.featured__card {
+    color: #fff;
+}
+
+.featured__card img {
+    max-width: 90%;
+}
+
+.featured__card--price {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.featured__card--filter {
+    display: inline;
+    position: relative;
+    height: 25vh;
+    margin: 0;
+    padding: 5%;
+    left: 20%;
+    background-color: #217065; 
+}
+
+.featured__card--filter h3 {
+    font-size: 1.5em;
+    -webkit-text-stroke: 1px #000; 
+    margin: 5% 0; 
+}
+
+.featured__card--filter form {
+    font-size: 1.3em;  
+}
+
+
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.item2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border: dashed 2px #fff;
+}
+
+.item3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border: dashed 2px #fff;
+}
+
+.item4 { 
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: dashed 2px #fff;
+}
+
+
+.item5 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: dashed 2px white;
+}
+
+.item6 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border: dashed 2px white;
+}
+
+.item7 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border: dashed 2px white;
+}
+
+.item8 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    border: dashed 2px white;
+}
+
+.item9 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    border: dashed 2px white;
+}
+
+.featured__card {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 20% 80%;
+}
+
+.featured__card--subhead {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.featured__card--cardimg {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-left: 5px;
+}
+
+.featured__card--description {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-right: 5px;
+}
+
+.featured__card--radio {
+    border-bottom: double 2px #fff;
+}
+
+form {
+    margin-bottom: 10px;
+}
+
+
+.featured__card--button {
+    font-size: 1em;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #217065;
+    color: #fff;
+}
+
+.featured__card--button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.featured__card--button:hover {
+    background: #fff;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.featured__card.item1 {
+    background-color: #217065;
+}
+
+
+/* responsive products */
+
+@media screen and (max-width: 800px) {
+
+.navbar__container {
+    margin: auto;
+}
+
+.navbar__logo {
+    margin: auto;
+}
+
+.featured__container {
+    display: flex;
+    justify-items: flex-start;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+
+}  
+
+.featured__card {
+    padding: 1%;
+    margin: auto;
+}
+
+.featured__card--filter {
+    width: fit-content;
+    height: fit-content;
+}
+
+form {
+    width: 100%;
+}
+
+.featured__card--button {
+    width: 100%;
+}
+
+
+.featured__card--radio {
+    margin: auto;
+    padding: 0 30px;
+}
+
+.featured__card--checkbox {
+    margin: auto;
+    padding: 0 30px;
+}
+
+
+.item1 {
+    background-size: 0 0;
+    width: 100%;
+}
+
+
+.featured__card--cardimg img{
+    padding-bottom: 5%;
+}
+
+.featured__card--description {
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+}
+
+
