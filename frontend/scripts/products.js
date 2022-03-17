@@ -11,16 +11,18 @@ async function fetchProducts() {
     console.log(data);
     for (i = 0; i < data.length; i++) {
             itemContainer.innerHTML += `
-            <div class="featured__card"><div class="category">${data[i].category}</div>
-            <h3 class="featured__card--subhead">${data[i].prodname}</h3>
-                <div class="featured__card--cardimg">
-                    <a href="./detail.html"><img src="${data[i].img}" alt="h1"></a>
+            <div class="featured__card">
+                <div class="category">${data[i].category}
                 </div>
-                <div class="featured__card--description">
-                <p class="featured__card--price">Price: ${data[i].price}</p>
-                <p>${data[i].proddesc}</p>
-                <a href="./detail.html" class="featured__card--button">Buy Now</a>
-                </div>
+                    <h3 class="featured__card--subhead">${data[i].prodname}</h3>
+                    <div class="featured__card--cardimg">
+                        <a href="./detail.html"><img src="${data[i].img}" alt="h1"></a>
+                    </div>
+                    <div class="featured__card--description">
+                        <p class="featured__card--price">Price: ${data[i].price}</p>
+                        <p>${data[i].proddesc}</p>
+                        <a href="./detail.html" class="featured__card--button">Buy Now</a>
+                    </div>
             </div>`;
     }
     return data;
@@ -33,10 +35,12 @@ async function fetchFeatured() {
 
     for (i = 0; i < data.length; i++) {
         featuredContainer.innerHTML += `
-        <div class="related__card">
-            <a href="./products.html">
+        <div class="featured__container">
+        <div class="featured__card item1">
+            <a href="./products/product.html">
             <h3 class="related__card--subhead">${data[i].prodname}</h3>
             <img src="${data[i].img}"></a>
+            </a>
         </div>`;
     }
     return data;
