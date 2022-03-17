@@ -32,6 +32,35 @@ type Feat struct {
 	Featured string  `json:"featured"`
 }
 
+//Fetches just the featured inventory
+func getFeatured() []*Feat {
+	// Open up our database connection.
+	db, err := sql.Open("mysql", "root:fallon87@tcp(database:3306)/wolfhart")
+	// if there is an error opening the connection, handle it
+	if err != nil {
+		log.Print(err.Error())
+	}
+	defer db.Close()
+
+	// Execute the query
+	results, err := db.Query("SELECT prodname, img, featured FROM products WHERE featured = 1")
+	if err != nil {
+		panic(err.Error()) // proper error handling instead of panic in your app
+	}
+
+	var feats []*Feat
+	for results.Next() {
+		var feat Feat
+		err = results.Scan(&feat.Name, &feat.Img, &feat.Featured)
+		if err != nil {
+			panic(err.Error())
+		}
+		feats = append(feats, &feat)
+	}
+
+	return feats
+}
+
 //Fetches all inventory
 func getInventory() []*Item {
 	// Open up our database connection.
@@ -61,43 +90,24 @@ func getInventory() []*Item {
 	return items
 }
 
-//Fetches just the featured inventory
-func getFeatured() []*Feat {
-	// Open up our database connection.
-	db, err := sql.Open("mysql", "root:fallon87@tcp(database:3306)/wolfhart")
-	// if there is an error opening the connection, handle it
-	if err != nil {
-		log.Print(err.Error())
-	}
-	defer db.Close()
-
-	// Execute the query
-	results, err := db.Query("SELECT prodname, img FROM products WHERE featured = 1")
-	if err != nil {
-		panic(err.Error()) // proper error handling instead of panic in your app
-	}
-
-	var feats []*Feat
-	for results.Next() {
-		var feat Feat
-		err = results.Scan(&feat.ID, &feat.Name, &feat.Category, &feat.Price, &feat.Img, &feat.ProdDesc, &feat.Featured)
-		if err != nil {
-			panic(err.Error())
-		}
-		feats = append(feats, &feat)
-	}
-
-	return feats
-}
-
 func homePage(w http.ResponseWriter, r *http.Request) {
 	enableCors(&w)
-
-	feats := getFeatured()
+	fmt.Println("This is the HomePage router.")
 
 	w.WriteHeader(http.StatusOK)
 	w.Header().Set("Content-Type", "application/json")
 	fmt.Println("Endpoint Hit: homePage")
+
+}
+
+func featuredPage(w http.ResponseWriter, r *http.Request) {
+	enableCors(&w)
+	fmt.Println("This is the featured router.")
+	feats := getFeatured()
+
+	w.WriteHeader(http.StatusOK)
+	w.Header().Set("Content-Type", "application/json")
+	fmt.Println("Endpoint Hit: featuredPage")
 	json.NewEncoder(w).Encode(feats)
 
 }
@@ -120,6 +130,7 @@ func main() {
 	router.HandleFunc("/contact", homePage).Methods("GET")
 	router.HandleFunc("/detail", homePage).Methods("GET")
 	router.HandleFunc("/search", homePage).Methods("GET")
+	router.HandleFunc("/featured", featuredPage).Methods("GET")
 	router.HandleFunc("/products", productPage).Methods("GET")
 
 	log.Fatal(http.ListenAndServe(":8080", router))

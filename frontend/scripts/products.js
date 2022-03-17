@@ -28,11 +28,11 @@ async function fetchProducts() {
 
 async function fetchFeatured() {
     console.log("fetchFeatured was hit");
-    const response = await fetch(`http://localhost:8080/`);
+    const response = await fetch(`http://localhost:8080/featured`);
     const data = await response.json();
 
     for (i = 0; i < data.length; i++) {
-        featuredContainer.innerHTML += `<h1>THIS IS STILL FEATURED</h1>
+        featuredContainer.innerHTML += `
         <div class="related__card">
             <a href="./products.html">
             <h3 class="related__card--subhead">${data[i].prodname}</h3>
