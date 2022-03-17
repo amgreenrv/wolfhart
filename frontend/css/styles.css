@@ -351,42 +351,43 @@ transition: all 0.3s ease;
 .featured__container {
     display: flex;
     flex-direction: row;
+    justify-items: center;
     align-content: center;
     background-color: #217065;
     z-index: 2;
-    padding: 1rem;
+    width: auto;
+}
+
+.featured__card{
+    border: dashed 2px #fff;
+    padding: 1%;
+}
+
+.featured__card img{
+    max-width: 90%;
 }
 
 .featured__card a {
-text-decoration: none;
+    text-decoration: none;
 }
 
 .featured__card img:hover {
-cursor: pointer;
-transform: scale(1.1);
+    cursor: pointer;
+    transform: scale(1.1);
 }
+
 
 .featured__card--subhead {
-color: #fff;
-padding: 20px 40px;
--webkit-text-stroke: 1px #000;
-font-size: 2em;
+    color: #fff;
+    padding: 20px 40px;
+    -webkit-text-stroke: 1px #000;
+    font-size: 2em;
 }
-
-
-#psu {
-margin-left: 10px;
-}
-
-#aio {
-margin-left: 10px;
-}
-
 
 /* responsive cards */
 
 @media screen and (max-width: 800px) {
-.featured {
+.featured__container {
     display: flex;
     flex-wrap: wrap;
     justify-items: center;
