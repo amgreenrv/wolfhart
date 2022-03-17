@@ -62,7 +62,7 @@ func getFeatured() []*Item {
 	defer db.Close()
 
 	// Execute the query
-	results, err := db.Query("SELECT * FROM products WHERE featured=`true`")
+	results, err := db.Query(`SELECT * FROM products WHERE featured="true"`)
 	if err != nil {
 		panic(err.Error()) // proper error handling instead of panic in your app
 	}
