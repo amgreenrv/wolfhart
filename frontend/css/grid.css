@@ -58,7 +58,7 @@
 .featured__product--content button{
     font-size: 1.2em;
     width: 40%;
-    margin: 3% 2%;
+    margin: 3% 0;
 }
 
 .featured__product--content h2 {
@@ -80,7 +80,14 @@
     font-size: 1.5em;
 }
 
-.featured__product--content--quantity{
+.featured__product--content--quantity select{
+    width: 20%;
+    font-size: 1.3em;
+    margin: auto;
+}
+
+.featured__product--content--quantity button{
+    width: 40%;
     font-size: 1.5em;
 }
 
@@ -197,18 +204,20 @@ button .fa{
     margin: 5%;
 }
 
-.related__products__container {
+.featured__container {
     display: flex;
     flex-direction: column;
-    margin: 0 5%;
+    align-items: center;
 }
 
 .featured__product--content button{
     width: 100%;
 }
 
-.featured__product--content--quantity{
-    margin: 5% 0;
+.featured__product--content--quantity select{
+    width: 100%;
+    font-size: 1em;
+    margin: auto;
 }
 
 .featured__product--content h2{
@@ -221,9 +230,6 @@ button .fa{
 }
 
 }
-
-
-
 
 
 .footer__links h2{
