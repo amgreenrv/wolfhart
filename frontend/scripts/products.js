@@ -12,8 +12,6 @@ async function fetchProducts() {
     for (i = 0; i < data.length; i++) {
             itemContainer.innerHTML += `
             <div class="featured__card">
-                <div class="category">${data[i].category}
-                </div>
                     <h3 class="featured__card--subhead">${data[i].prodname}</h3>
                     <div class="featured__card--cardimg">
                         <a href="./detail.html"><img src="${data[i].img}" alt="h1"></a>

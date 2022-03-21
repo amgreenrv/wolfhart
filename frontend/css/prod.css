@@ -7,19 +7,19 @@ form span{
     background-color: #282b29;
 }
 
-.featured p {
+.featured__card--description p {
     margin: 10% 0 15% 0;
     font-size: 1.3em;
 }
 
-.featured__container {
+.inventory__container {
     background-color: #282b29;
-    margin: 5% 1% 0;
+    margin: 5% 1% 5%;
     padding: 3% 3%;
     display: grid;
     grid-column-gap: 3%;
     grid-row-gap: 3%;
-    grid-template-columns: 20% 40% 40%;
+    grid-template-columns: 50% 50%;
 }
 
 .featured__card--subhead {
@@ -202,6 +202,10 @@ form {
     background-color: #217065;
 }
 
+.footer__link{
+    margin-top: 5%;
+}
+
 
 /* responsive products */
 
@@ -215,7 +219,7 @@ form {
     margin: auto;
 }
 
-.featured__container {
+.inventory__container {
     display: flex;
     justify-items: flex-start;
     margin: 0;
