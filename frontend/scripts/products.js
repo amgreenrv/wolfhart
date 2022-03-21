@@ -12,6 +12,7 @@ async function fetchProducts() {
     for (i = 0; i < data.length; i++) {
             itemContainer.innerHTML += `
             <div class="featured__card">
+                <div class="featured__category">${data[i].category}</div>
                     <h3 class="featured__card--subhead">${data[i].prodname}</h3>
                     <div class="featured__card--cardimg">
                         <a href="./detail.html"><img src="${data[i].img}" alt="h1"></a>
@@ -46,4 +47,35 @@ async function fetchFeatured() {
 fetchProducts();
 fetchFeatured();
 
-// Filter script Below
+// Filter script 
+
+var categoryList = document.querySelectorAll(".fcategory")
+var category = document.querySelectorAll(".featured__category")
+setTimeout(filterFunc,100)
+
+
+for (i = 0; i < categoryList.length; i++) {
+    categoryList[i].addEventListener("click", filterFunc)
+}
+
+function filterFunc() {
+    var ip = document.querySelectorAll(".featured__card")
+    category = document.querySelectorAll(".featured__category")
+    for (i = 0; i < categoryList.length; i++) {
+        if (categoryList[i].checked) {
+            for (v = 0; v < ip.length; v++) {
+                if (categoryList[i].value == "all") {
+                    ip[v].style.display = "grid"
+            }
+            else {
+                if (category[v].innerHTML != categoryList[i].value){
+                    category[v].parentNode.style.display = "none"
+                }
+                else {
+                    category[v].parentNode.style.display = "grid"
+                    }
+                }
+            }
+        }
+    }
+}

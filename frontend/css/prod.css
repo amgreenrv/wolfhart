@@ -18,12 +18,17 @@ form span{
 .filter__container h3 {
     font-size: 2em;
     -webkit-text-stroke: 1px #000; 
-    margin: 1% 10%;
+    margin: 1% 5%;
 }
 
 .filter__container form {
     font-size: 1.5em; 
-    margin: 1% 10%; 
+    margin: 2%; 
+}
+
+.fcategory {
+    font-size: 3em;
+    padding-left: 1%;
 }
 
 
@@ -62,6 +67,10 @@ form span{
     font-weight: 700;
     font-size: 1.5em;
     color: #fff;
+}
+
+.featured__category {
+    visibility: hidden;
 }
 
 
@@ -228,19 +237,18 @@ form span{
 
 
 .filter__container {
-    margin: 0;
-    align-self: center;
+    margin: 2%;
 }
 
 .filter__container h3 {
-    font-size: 1.5em;
+    font-size: 2.5em;
     -webkit-text-stroke: 1px #000; 
-    margin: 1%;
+    margin: auto;
 }
 
 .filter__container form {
-    font-size: 1.2em; 
-    margin: 0;
+    font-size: 2em; 
+    margin: auto;
 }
 
 

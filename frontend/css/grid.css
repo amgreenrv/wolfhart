@@ -85,11 +85,10 @@
 }
 
 input {
-    width: 10%;
+    width: 5%;
     border: 1px solid #ccc;
     font-size: 1.1em;
     font-weight: bold;
-    text-align: center;
 }
 
 button {
