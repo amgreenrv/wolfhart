@@ -211,36 +211,36 @@ form span{
 
 .inventory__container {
     display: flex;
-    justify-items: flex-start;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-
-}  
-
-.featured__card {
-    padding: 1%;
+    flex-wrap: wrap;
     margin: auto;
-}
-
-form {
-    width: 100%;
-}
+}  
 
 .featured__card--button {
     width: 100%;
+    margin-top: 1%;
+}
+
+.featured__card {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 10% 90%;
 }
 
 
 .filter__container {
-    margin: auto;
+    margin: 0;
     align-self: center;
 }
 
+.filter__container h3 {
+    font-size: 1.5em;
+    -webkit-text-stroke: 1px #000; 
+    margin: 1%;
+}
 
-.item1 {
-    background-size: 0 0;
-    width: 100%;
+.filter__container form {
+    font-size: 1.2em; 
+    margin: 0;
 }
 
 
@@ -248,9 +248,23 @@ form {
     padding-bottom: 5%;
 }
 
+.featured__card--description p{
+    font-size: 1.7em;
+}
+
+.featured__card--price p{
+    font-size: 1.8em;
+    padding-bottom: 5%;
+}
+
+.featured__card--button {
+    font-size: 2em;
+    width: 100%;
+}
+
 .featured__card--description {
-    margin: auto;
-    padding-bottom: 20px;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
 }
 
 }
