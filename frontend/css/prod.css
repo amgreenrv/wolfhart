@@ -7,6 +7,28 @@ form span{
     background-color: #282b29;
 }
 
+/* filter for products page */
+
+
+.filter__container {
+    display: inline;
+    color: #fff;
+}
+
+.filter__container h3 {
+    font-size: 2em;
+    -webkit-text-stroke: 1px #000; 
+    margin: 1% 10%;
+}
+
+.filter__container form {
+    font-size: 1.5em; 
+    margin: 1% 10%; 
+}
+
+
+/* product cards*/
+
 .featured__card--description p {
     margin: 10% 0 15% 0;
     font-size: 1.3em;
@@ -40,26 +62,6 @@ form span{
     font-weight: 700;
     font-size: 1.5em;
     color: #fff;
-}
-
-.featured__card--filter {
-    display: inline;
-    position: relative;
-    height: 25vh;
-    margin: 0;
-    padding: 5%;
-    left: 20%;
-    background-color: #217065; 
-}
-
-.featured__card--filter h3 {
-    font-size: 1.5em;
-    -webkit-text-stroke: 1px #000; 
-    margin: 5% 0; 
-}
-
-.featured__card--filter form {
-    font-size: 1.3em;  
 }
 
 
@@ -164,14 +166,6 @@ form span{
     padding-right: 5px;
 }
 
-.featured__card--radio {
-    border-bottom: double 2px #fff;
-}
-
-form {
-    margin-bottom: 10px;
-}
-
 
 .featured__card--button {
     font-size: 1em;
@@ -202,10 +196,6 @@ form {
     background-color: #217065;
 }
 
-.footer__link{
-    margin-top: 5%;
-}
-
 
 /* responsive products */
 
@@ -233,11 +223,6 @@ form {
     margin: auto;
 }
 
-.featured__card--filter {
-    width: fit-content;
-    height: fit-content;
-}
-
 form {
     width: 100%;
 }
@@ -247,14 +232,9 @@ form {
 }
 
 
-.featured__card--radio {
+.filter__container {
     margin: auto;
-    padding: 0 30px;
-}
-
-.featured__card--checkbox {
-    margin: auto;
-    padding: 0 30px;
+    align-self: center;
 }
 
 

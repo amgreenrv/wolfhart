@@ -43,44 +43,21 @@
 
 <!--Featured Products Section-->
 
-<div class="product__container">
-
-    <div class="product__card">
-        <div class="product__card--filter">
+<div class="filter__container">
             
-            <h3>Category</h3>
-            <div class="product__card--radio">
-                <form>
-                    <span><input type="radio" id="all" name="hardware_filter" value="ALL" checked>
-                        <label for="all">All Products</label></span>
-                    <span><input type="radio" id="case" name="hardware_filter" value="CASE">
-                    <label for="case">Case</label></span>
-                    <span><input type="radio" id="components" name="hardware_filter" value="COMPONENTS">
-                    <label for="components">Components</label></span>
-                    <span><input type="radio" id="power" name="hardware_filter" value="POWER">
-                    <label for="power">Power</label></span>
-                    <span><input type="radio" id="accessories" name="hardware_filter" value="ACCESSORIES">
-                        <label for="accessories">Accessories</label></span>
-                </form>
-            </div>
-
-            <h3>Price</h3>
-            
-            <div class="product__card--checkbox">
-                <form>
-                    <span><input type="checkbox" id="least" name="least" value="0-99">
-                    <label for="least">$0-$99</label></span>
-                    <span><input type="checkbox" id="less" name="less" value="100-199">
-                    <label for="less">$100-$199</label></span>
-                    <span><input type="checkbox" id="more" name="more" value="200-299">
-                    <label for="more"> $200-$299</label></span>
-                    <span><input type="checkbox" id="most" name="most" value="300+">
-                    <label for="most">$300+</label></span>
-                </form>
-            </div>
-        </div>
-    </div>
-
+    <h3>Filter by Category</h3>
+        <form>
+            <input type="radio" id="all" name="hardware_filter" value="ALL" checked>
+                <label for="all">All Products</label>
+            <input type="radio" id="case" name="hardware_filter" value="CASE">
+            <label for="case">Case</label>
+            <input type="radio" id="components" name="hardware_filter" value="COMPONENTS">
+            <label for="components">Components</label>
+            <input type="radio" id="power" name="hardware_filter" value="POWER">
+            <label for="power">Power</label>
+            <input type="radio" id="accessories" name="hardware_filter" value="ACCESSORIES">
+                <label for="accessories">Accessories</label>
+        </form>
 </div>
 
 <div class="inventory__container">
