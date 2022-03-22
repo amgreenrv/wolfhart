@@ -50,10 +50,16 @@
             <div class="search__container--bar">
                 <form action="" onsubmit="return false">
                     <input type="text" id="search" class="search__container--term" onkeyup="searchFunc()" placeholder="Start your search here."> 
+                    <select class="priceSort" onchange="sortPrice()">
+                        <option value = "default" default selected>Sort By Price</option>
+                        <option value = "Highest">Highest to Lowest</option>
+                        <option value = "Lowest">Lowest to Highest</option>
+                      </select>
                 </form>
             </div>
 
     </div>
+
 
 
     <div class="inventory__container">
