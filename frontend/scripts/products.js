@@ -47,6 +47,8 @@ async function fetchFeatured() {
 fetchProducts();
 fetchFeatured();
 
+
+
 // Filter script 
 
 var categoryList = document.querySelectorAll(".fcategory")
@@ -79,3 +81,27 @@ function filterFunc() {
         }
     }
 }
+
+
+
+
+//Search name
+
+function searchFunc() {
+    const items = document.querySelectorAll(".featured__card")
+    let input = document.querySelector("#search")
+    let inputValue = input.value.toLowerCase()
+  
+    for (i = 0; i < items.length; i++) {
+      let itemValue = items[i].textContent
+      if (itemValue.toLowerCase().indexOf(inputValue) > -1){
+        items[i].style.display = "grid";
+      } else {
+        items[i].style.display = "none";
+      }
+    }
+}
+
+
+
+//filterPrice
