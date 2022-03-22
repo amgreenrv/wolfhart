@@ -19,7 +19,7 @@ async function fetchProducts() {
                     </div>
                     <div class="featured__card--description">
                         <p class="featured__card--price">Price: ${data[i].price}</p>
-                        <p>${data[i].proddesc}</p>
+                        <p class="featured__card--desc">${data[i].proddesc}</p>
                         <a href="./detail.html" class="featured__card--button">Buy Now</a>
                     </div>
             </div>`;

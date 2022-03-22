@@ -1,6 +1,6 @@
 .search__container--bar {
-    width: 100%;
     text-align: center;
+    margin: 4%;
 }
 
 .search__container--bar input[type=text], select, textarea {
@@ -9,17 +9,6 @@
     border-radius: 4px;
     box-sizing: border-box;
     resize: vertical;
-}
-
-.search__container--button {
-    padding: 1%;
-    background-color: #217065;
-    color: #fff;
-}
-
-.search__container--button:hover {
-    background-color: #fff;
-    color: #000;
 }
 
 .search__container h2{
