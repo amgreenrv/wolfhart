@@ -27,8 +27,9 @@ type Item struct {
 func getFeatured() []*Item {
 
 	var password = os.Getenv("DB_PASSWORD")
+	var database = os.Getenv("DB_NAME")
 	// Open up our database connection.
-	db, err := sql.Open("mysql", fmt.Sprintf("root:%s@tcp(database:3306)/wolfhart", password))
+	db, err := sql.Open("mysql", fmt.Sprintf("root:%s@tcp(database:3306)/%s", password, database))
 	// if there is an error opening the connection, handle it
 	if err != nil {
 		log.Print(err.Error())
@@ -57,8 +58,9 @@ func getFeatured() []*Item {
 //Fetches ALL products from database
 func getInventory() []*Item {
 	var password = os.Getenv("DB_PASSWORD")
+	var database = os.Getenv("DB_NAME")
 	// Open up our database connection.
-	db, err := sql.Open("mysql", fmt.Sprintf("root:%s@tcp(database:3306)/wolfhart", password))
+	db, err := sql.Open("mysql", fmt.Sprintf("root:%s@tcp(database:3306)/%s", password, database))
 	// if there is an error opening the connection, handle it
 	if err != nil {
 		log.Print(err.Error())
