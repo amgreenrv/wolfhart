@@ -3,11 +3,14 @@
 let itemContainer = document.querySelector(".inventory__container");
 let featuredContainer = document.querySelector(".featured__container");
 
+let invArray = [];
+
 //pull data from database
 async function fetchProducts() {
     console.log("fetchProducts was hit");
     const response = await fetch(`http://localhost:8080/products`);
     const data = await response.json();
+    console.log(data);
     for (i = 0; i < data.length; i++) {
             itemContainer.innerHTML += `
             <div class="featured__card">
@@ -23,7 +26,7 @@ async function fetchProducts() {
                     </div>
             </div>`;
     }
-    return data;
+    return invArray = data;
 }
 
 async function fetchFeatured() {
@@ -106,30 +109,28 @@ function searchFunc() {
 //Price filter
 
 function sortPrice(){
-    const itemArray = itemContainer
-    let sortSelect = document.querySelector(".priceSort").value
+    let sortSelect = document.querySelector(".search__container--sort").value
 
     if (sortSelect === "Highest") {
-        itemArray.sort((a,b) => (a.price < b.price ? 1 : -1))
+        invArray.sort((a,b) => (a.price < b.price ? 1 : -1))
     } else if (sortSelect === "Lowest") {
-        itemArray.sort((a,b) => (a.price > b.price ? 1 : -1))
+        invArray.sort((a,b) => (a.price > b.price ? 1 : -1))
     }
 
     itemContainer.innerHTML = ""
 
-    for(i = 0; i < itemArray.length; i++){
+    for(i = 0; i < invArray.length; i++){
         itemContainer.innerHTML += `
         <div class="featured__card">
-            <div class="featured__category">${data[i].category}</div>
-                <h3 class="featured__card--subhead">${data[i].prodname}</h3>
+            <div class="featured__category">${invArray[i].category}</div>
+                <h3 class="featured__card--subhead">${invArray[i].prodname}</h3>
                 <div class="featured__card--cardimg">
-                    <a href="./detail.html"><img src="${data[i].img}" alt="h1"></a>
+                    <a href="./detail.html"><img src="${invArray[i].img}" alt="h1"></a>
                 </div>
                 <div class="featured__card--description">
-                    <p class="featured__card--price">${data[i].price}</p>
-                    <p class="featured__card--desc">${data[i].proddesc}</p>
+                    <p class="featured__card--price">${invArray[i].price}</p>
+                    <p class="featured__card--desc">${invArray[i].proddesc}</p>
                     <a href="./detail.html" class="featured__card--button">Buy Now</a>
                 </div>
-        </div>`;
-    }
+        </div>`};
 }

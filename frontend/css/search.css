@@ -1,14 +1,27 @@
 .search__container--bar {
-    text-align: center;
+    padding: 1% 5%;
     margin: 4%;
+    text-align: center;
+}
+
+.search__container--sort {
+    width: 50%;
+    padding: 1% 5%;
+    margin: 4%;
+    text-align: center;
+    background-color: #217065;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
 }
 
 .search__container--bar input[type=text], select, textarea {
-    padding: .5% 10%;
+    padding: 1% 5%;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     resize: vertical;
+    text-align: center;
 }
 
 .search__container h2{
@@ -21,9 +34,7 @@
 
 .search__container--term{
     font-size: 1.2em;
-}
-
-.main__content--featured {
+    width: 50%;
     text-align: center;
 }
 
