@@ -13,6 +13,9 @@ async function fetchProducts() {
     console.log(data);
 
     //Getting a TypeError: Cannot read properties of null (reading 'innerHTML'), this is loading before database is registering, at fetchProducts (products.js:15:13)
+    //check into an async or defer script for this.
+    
+    //loop through the data until all products populate, insert into html/div tag
     for (i = 0; i < data.length; i++) {
             itemContainer.innerHTML += `
             <div class="featured__card">
