@@ -49,12 +49,11 @@ function clickMe(smallImg) {
 
 //prevent auto submit of form
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
+function submitForm(event){
+    event.preventDefault();
 
     validate();
-});
-
+}
 
 // Form Validation
 

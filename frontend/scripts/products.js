@@ -11,6 +11,8 @@ async function fetchProducts() {
     const response = await fetch(`http://localhost:8080/products`);
     const data = await response.json();
     console.log(data);
+
+    //Getting a TypeError: Cannot read properties of null (reading 'innerHTML'), this is loading before database is registering, at fetchProducts (products.js:15:13)
     for (i = 0; i < data.length; i++) {
             itemContainer.innerHTML += `
             <div class="featured__card">
